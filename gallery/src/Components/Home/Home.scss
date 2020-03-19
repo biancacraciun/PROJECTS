@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kurale&display=swap");
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Kurale', serif;
+
+
+    .intro {
+        width: 400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        #hi {
+
+            p {
+                font-size: 25px;
+                color: #F38E9A
+            }  
+
+            span {
+                font-size: 50px;
+                font-family: 'Cookie', cursive;
+            }
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        #line {
+            border: 1px solid #F38E9A;
+            width: 30px;
+            margin-top: 0px;
+            background-color: #F38E9A;
+        }
+
+        &:hover {
+            #line {
+                width: 230px;
+                transition: width 2s;
+            }
+        }
+    }
+
+    img {
+        width: 350px;
+        height: 500px;
+        border-radius: 10%;
+        -webkit-animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    
+        @-webkit-keyframes fade-in-fwd {
+            0% {
+              -webkit-transform: translateZ(-80px);
+                      transform: translateZ(-80px);
+              opacity: 0;
+            }
+            100% {
+              -webkit-transform: translateZ(0);
+                      transform: translateZ(0);
+              opacity: 1;
+            }
+        }
+        
+        @keyframes fade-in-fwd {
+            0% {
+              -webkit-transform: translateZ(-80px);
+                      transform: translateZ(-80px);
+              opacity: 0;
+            }
+            100% {
+              -webkit-transform: translateZ(0);
+                      transform: translateZ(0);
+              opacity: 1;
+            }
+        }  
+    }
+}

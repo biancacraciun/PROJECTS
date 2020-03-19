@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kurale&display=swap");
+
+.contact {
+
+    .contact-me {
+
+        #line {
+            border: 1px solid #F38E9A;
+            width: 30px;
+            margin-top: -20px;
+            background-color: #F38E9A;
+        }
+    
+        &:hover {  
+            #line {
+                width: 205px;
+                transition: width 2s;
+            }
+        }
+    
+        h1 { 
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 40px;
+        }
+    
+        p {
+            font-family: 'Kurale', serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+
+            li {
+
+                a {
+                    text-decoration: none;
+                    margin: 0px 10px;
+                    font-family: 'Kurale', serif;
+                }
+
+                span {
+                    color: #F38E9A;
+                    margin: 0px 10px;
+                    font-family: 'Kurale', serif;
+
+                    &:hover {
+                        letter-spacing: 3px;
+                        transition: letter-spacing 2s;
+                    }   
+                }
+                
+                .email {
+                    -webkit-animation: jello-horizontal 2s infinite both;
+                    animation: jello-horizontal 2s infinite both;
+
+                    @-webkit-keyframes jello-horizontal {
+                        0% {
+                          -webkit-transform: scale3d(1, 1, 1);
+                                  transform: scale3d(1, 1, 1);
+                        }
+                        30% {
+                          -webkit-transform: scale3d(1.25, 0.75, 1);
+                                  transform: scale3d(1.25, 0.75, 1);
+                        }
+                        40% {
+                          -webkit-transform: scale3d(0.75, 1.25, 1);
+                                  transform: scale3d(0.75, 1.25, 1);
+                        }
+                        50% {
+                          -webkit-transform: scale3d(1.15, 0.85, 1);
+                                  transform: scale3d(1.15, 0.85, 1);
+                        }
+                        65% {
+                          -webkit-transform: scale3d(0.95, 1.05, 1);
+                                  transform: scale3d(0.95, 1.05, 1);
+                        }
+                        75% {
+                          -webkit-transform: scale3d(1.05, 0.95, 1);
+                                  transform: scale3d(1.05, 0.95, 1);
+                        }
+                        100% {
+                          -webkit-transform: scale3d(1, 1, 1);
+                                  transform: scale3d(1, 1, 1);
+                        }
+                    }
+                    
+                    @keyframes jello-horizontal {
+                        0% {
+                          -webkit-transform: scale3d(1, 1, 1);
+                                  transform: scale3d(1, 1, 1);
+                        }
+                        30% {
+                          -webkit-transform: scale3d(1.25, 0.75, 1);
+                                  transform: scale3d(1.25, 0.75, 1);
+                        }
+                        40% {
+                          -webkit-transform: scale3d(0.75, 1.25, 1);
+                                  transform: scale3d(0.75, 1.25, 1);
+                        }
+                        50% {
+                          -webkit-transform: scale3d(1.15, 0.85, 1);
+                                  transform: scale3d(1.15, 0.85, 1);
+                        }
+                        65% {
+                          -webkit-transform: scale3d(0.95, 1.05, 1);
+                                  transform: scale3d(0.95, 1.05, 1);
+                        }
+                        75% {
+                          -webkit-transform: scale3d(1.05, 0.95, 1);
+                                  transform: scale3d(1.05, 0.95, 1);
+                        }
+                        100% {
+                          -webkit-transform: scale3d(1, 1, 1);
+                                  transform: scale3d(1, 1, 1);
+                        }
+                    }                      
+                }
+
+                #e-mail {
+                    text-decoration: none;
+                    color: #F38E9A;
+
+                    &:hover {
+                        letter-spacing: 3px;
+                        transition: letter-spacing 2s;
+                    }
+                }
+
+                .phone {
+                    animation: wiggle 1s infinite;
+
+                    @keyframes wiggle {
+                        0% { transform: rotate(0deg); }
+                       80% { transform: rotate(0deg); }
+                       85% { transform: rotate(10deg); }
+                       95% { transform: rotate(-10deg); }
+                      100% { transform: rotate(0deg); }
+                    }
+                }
+
+                .download {
+                    -webkit-animation: swing-in-top-fwd 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite both;
+                    animation: swing-in-top-fwd 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) infinite both;
+
+                    @-webkit-keyframes swing-in-top-fwd {
+                        0% {
+                          -webkit-transform: rotateX(-100deg);
+                                  transform: rotateX(-100deg);
+                          -webkit-transform-origin: top;
+                                  transform-origin: top;
+                          opacity: 0;
+                        }
+                        100% {
+                          -webkit-transform: rotateX(0deg);
+                                  transform: rotateX(0deg);
+                          -webkit-transform-origin: top;
+                                  transform-origin: top;
+                          opacity: 1;
+                        }
+                    }
+                    
+                    @keyframes swing-in-top-fwd {
+                        0% {
+                          -webkit-transform: rotateX(-100deg);
+                                  transform: rotateX(-100deg);
+                          -webkit-transform-origin: top;
+                                  transform-origin: top;
+                          opacity: 0;
+                        }
+                        100% {
+                          -webkit-transform: rotateX(0deg);
+                                  transform: rotateX(0deg);
+                          -webkit-transform-origin: top;
+                                  transform-origin: top;
+                          opacity: 1;
+                        }
+                    }
+                      
+                }
+
+                #download {
+                    color: #F38E9A;
+
+                    &:hover {
+                        letter-spacing: 3px;
+                        transition: letter-spacing 2s;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

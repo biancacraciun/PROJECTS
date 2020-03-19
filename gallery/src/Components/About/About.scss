@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kurale&display=swap");
+
+.about {
+
+    .content {
+
+        h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 40px;
+        }  
+
+        &:hover {
+        
+            .line {
+                width: 140px;
+                transition: width 2s;
+            }
+        }
+        
+        .line {
+            border: 1px solid #F38E9A;
+            width: 30px;
+            margin-top: -25px;
+            background-color: #F38E9A;
+        }
+
+        .aboutMe {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Kurale', serif;
+        }
+
+        .words {
+            font-family: 'Kurale', serif;
+
+            border: 1px solid #F38E9A;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            padding: 20px;
+            margin: 35px 0px;
+        }
+    }
+}

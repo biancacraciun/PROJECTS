@@ -1,0 +1,95 @@
+
+.header-and-menu { 
+    background-color: #011627;
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .top {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+}
+
+body {
+    background-color: #334452;
+}
+
+
+.pages {
+    position: relative;
+    background-color: white;
+    margin-left: 500px;
+    width: 60%;
+    padding: 25px;
+    box-sizing: border-box;
+    // overflow-y: scroll;
+    // overflow-x: hidden;
+    
+    // -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    // scrollbar-width: none; /* Firefox */
+
+    // &::-webkit-scrollbar { /* Safari and Chrome */
+    //     display: none;
+    // }
+
+    .home {
+        border-bottom: 1px solid #eee;
+        margin-bottom: 50px;
+        padding: 100px 50px;
+    }
+
+    .about { 
+        border-bottom: 1px solid #eee;
+        margin-bottom: 50px;
+        padding: 100px 60px 255px 60px;
+    }
+
+    .resume {
+        border-bottom: 1px solid #eee;
+        margin-bottom: 50px;
+        padding: 100px 60px;
+
+        .education-and-job {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-column-gap: -50px;
+            justify-content: space-between;
+    
+            #education {
+                display: grid;
+                grid-template-columns: auto;
+                grid-row-gap: 0px;
+                grid-template-rows: auto;
+                justify-content: start;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    .knowledge {
+        border-bottom: 1px solid #eee;
+        margin-bottom: 50px;
+        padding: 100px 60px 250px 60px;
+    }
+
+    .contact {
+        border-bottom: 1px solid #eee;
+        margin-bottom: 50px;
+        padding: 100px 60px 400px 60px;
+    }
+}
+
+// body {
+//     overflow-y: scroll;
+//     -ms-overflow-style: none;  /* Internet Explorer 10+ */
+//     scrollbar-width: none; /* Firefox */
+
+//     &::-webkit-scrollbar { /* Safari and Chrome */
+//         display: none;
+//     }
+// }
