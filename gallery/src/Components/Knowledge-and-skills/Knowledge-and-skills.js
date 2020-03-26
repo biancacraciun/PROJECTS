@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+ 
 import './Knowledge.scss';
 
 

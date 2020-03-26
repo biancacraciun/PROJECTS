@@ -42,3 +42,40 @@
         }
     }
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .about {
+        .content {
+            h1 {
+                -webkit-animation: text-shadow-drop-top 2s infinite both;
+                animation: text-shadow-drop-top 2s infinite both;
+
+                @-webkit-keyframes text-shadow-drop-top {
+                    0% {
+                    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                    }
+                    100% {
+                    text-shadow: 0 -6px 18px rgba(0, 0, 0, 0.35);
+                    }
+                }
+
+                @keyframes text-shadow-drop-top {
+                    0% {
+                    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+                    }
+                    100% {
+                    text-shadow: 0 -6px 18px rgba(0, 0, 0, 0.35);
+                    }
+                }
+            }
+
+            .line {
+                display: none;
+            }
+        }
+    }
+}

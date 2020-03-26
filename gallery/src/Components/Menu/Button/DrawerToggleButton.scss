@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Kurale&display=swap");
+
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    span {
+        font-family: 'Kurale', serif;
+        font-size: 25px;
+        color: white;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+    .toggle-button {
+        display: inline-block;
+        margin: 50px 50px 0px 25px;
+
+       .toggle-button__line {
+           border: 1px solid white;
+           width: 30px;
+           margin-bottom: 8px;
+           background-color: white;
+       }
+    }
+}

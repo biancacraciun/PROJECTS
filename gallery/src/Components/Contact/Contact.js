@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contact.scss';
+import './Contact.scss'; 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
@@ -13,7 +13,7 @@ const contact = (props) => {
         <div className="contact">
             <div className="contact-me">
                 <h1>Contact</h1>
-                <div id="line"/>
+                <div id="line" />
                 <p>Reach me at:</p>
                 <ul>
                     <li>

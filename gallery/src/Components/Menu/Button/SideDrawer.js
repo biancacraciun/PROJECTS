@@ -1,25 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-scroll';
 
-import './Menu.scss';
+import './SideDrawer.scss';
 
-class Menu extends Component {
-    constructor(props) {
-        super(props);
+const sideDrawer = (props) => {
+    let drawerClasses = 'side-drawer';
+
+    if(props.show) {
+        drawerClasses = 'side-drawer open';
     }
- 
-    render() {
-        return (
-            <div className="menu">
+
+    return (
+        <nav className={drawerClasses}>
+            <ul className="toggle__menu">
                 <Link
+                    id="home"
                     className="option"
                     activeClass="active"
-                    to="Home"
+                    to="home"
                     spy={true}
                     smooth={true}
                     offset={0}
                     duration={1000}
-                > Home </Link>
+                >
+                    {/* <FontAwesomeIcon className="home" icon={faHome} /> */}
+                    Home
+                </Link>
                 
                 <Link 
                     className="option"
@@ -29,7 +35,10 @@ class Menu extends Component {
                     smooth={true}
                     offset={0}
                     duration={1000}
-                > About </Link>
+                >
+                    {/* <FontAwesomeIcon className="user" icon={faUser} /> */}
+                    About
+                </Link>
 
                 <Link 
                     className="option"
@@ -37,9 +46,13 @@ class Menu extends Component {
                     to="resume"
                     spy={true}
                     smooth={true}
+                    isDynamic={true}
                     offset={0}
                     duration={1000}
-                > Resume </Link>
+                >
+                    {/* <FontAwesomeIcon className="resume" icon={faUserGraduate} /> */}
+                    Resume
+                </Link>
 
                 <Link 
                     className="option"
@@ -47,9 +60,13 @@ class Menu extends Component {
                     to="knowledge"
                     spy={true}
                     smooth={true}
+                    isDynamic={true}
                     offset={0}
                     duration={1000}
-                > Knowledge </Link>
+                >
+                    {/* <FontAwesomeIcon className="knowledge" icon={faCogs} /> */}
+                    Knowledge
+                </Link>
 
                 <Link 
                     className="option"
@@ -59,10 +76,13 @@ class Menu extends Component {
                     smooth={true}
                     offset={0}
                     duration={1000}
-                > Contact </Link>
-            </div>
-        )
-    }
-}
+                >
+                    {/* <FontAwesomeIcon className="contact" icon={faIdCard} /> */}
+                    Contact
+                </Link>
+            </ul>
+        </nav>
+    )
+};
 
-export default Menu;
+export default sideDrawer;

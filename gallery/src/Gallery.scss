@@ -1,95 +1,170 @@
 
-.header-and-menu { 
-    background-color: #011627;
-    width: 400px;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    .top {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-    }
-}
-
 body {
     background-color: #334452;
 }
 
+.App {
 
-.pages {
-    position: relative;
-    background-color: white;
-    margin-left: 500px;
-    width: 60%;
-    padding: 25px;
-    box-sizing: border-box;
-    // overflow-y: scroll;
-    // overflow-x: hidden;
+    .header-and-menu { 
+        background-color: #011627;
+        width: 29%;
+        height: 100%;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     
-    // -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    // scrollbar-width: none; /* Firefox */
-
-    // &::-webkit-scrollbar { /* Safari and Chrome */
-    //     display: none;
-    // }
-
-    .home {
-        border-bottom: 1px solid #eee;
-        margin-bottom: 50px;
-        padding: 100px 50px;
-    }
-
-    .about { 
-        border-bottom: 1px solid #eee;
-        margin-bottom: 50px;
-        padding: 100px 60px 255px 60px;
-    }
-
-    .resume {
-        border-bottom: 1px solid #eee;
-        margin-bottom: 50px;
-        padding: 100px 60px;
-
-        .education-and-job {
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-column-gap: -50px;
-            justify-content: space-between;
-    
-            #education {
-                display: grid;
-                grid-template-columns: auto;
-                grid-row-gap: 0px;
-                grid-template-rows: auto;
-                justify-content: start;
-                margin-bottom: 50px;
-            }
+        .top {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
         }
     }
-
-    .knowledge {
-        border-bottom: 1px solid #eee;
-        margin-bottom: 50px;
-        padding: 100px 60px 250px 60px;
-    }
-
-    .contact {
-        border-bottom: 1px solid #eee;
-        margin-bottom: 50px;
-        padding: 100px 60px 400px 60px;
+    
+    .pages {
+        position: relative;
+        background-color: white;
+        // margin-left: 500px;
+        margin-left: 32%;
+        width: 65%;
+        padding: 25px;
+        box-sizing: border-box;
+        // overflow-y: scroll;
+        // overflow-x: scroll;
+        
+        // -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        // scrollbar-width: none; /* Firefox */
+    
+        // &::-webkit-scrollbar { /* Safari and Chrome */
+        //     display: none;
+        // }
+    
+        .Home {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 50px;
+            padding: 100px 50px;
+        }
+    
+        .about { 
+            border-bottom: 1px solid #eee;
+            margin-bottom: 50px;
+            padding: 100px 60px 255px 60px;
+        }
+    
+        .resume {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 50px;
+            padding: 100px 60px;
+    
+            .education-and-job {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-column-gap: -50px;
+                justify-content: space-between;
+        
+                #education {
+                    display: grid;
+                    grid-template-columns: auto;
+                    grid-row-gap: 0px;
+                    grid-template-rows: auto;
+                    justify-content: start;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    
+        .knowledge {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 50px;
+            padding: 100px 60px 250px 60px;
+        }
+    
+        .contact {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 50px;
+            padding: 100px 60px 400px 60px;
+        }
     }
 }
 
-// body {
-//     overflow-y: scroll;
-//     -ms-overflow-style: none;  /* Internet Explorer 10+ */
-//     scrollbar-width: none; /* Firefox */
 
-//     &::-webkit-scrollbar { /* Safari and Chrome */
-//         display: none;
-//     }
-// }
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .App {
+        .header-and-menu {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+            .top {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+            }
+        }
+    
+        .pages {
+            width: auto;
+            margin-top: 130px;
+            margin-left: 0px;
+    
+            position: absolute;
+    
+            .Home {
+                height: 120vh;
+            }
+    
+            .about {
+                height: 120vh;
+            }
+    
+            .resume {
+                height: 140vh;
+            }
+    
+            .knowledge {
+                height: 120vh;
+            }
+    
+            .contact {
+                height: 100vh;
+            }
+        }
+    }
+}
+
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+    .App {
+
+        .pages {
+
+            .Home {
+                height: 62vh;
+            }
+
+            .about {
+                height: 55vh;
+            }
+
+            .knowledge {
+                height: 55vh;
+            }
+
+            .contact {
+                height: 55vh;
+            }
+        }
+    }
+}

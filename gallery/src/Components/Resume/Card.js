@@ -1,6 +1,6 @@
 import React from 'react';
 import './Resume.scss';
- 
+  
 const card = (props) => {
     return (    
         <div className="card"> 

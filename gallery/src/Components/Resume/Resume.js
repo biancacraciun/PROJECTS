@@ -3,7 +3,7 @@ import Card from './Card';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 
-import './Resume.scss';
+import './Resume.scss'; 
 
 class Resume extends Component { 
     constructor(props) {

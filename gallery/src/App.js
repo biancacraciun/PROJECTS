@@ -10,9 +10,10 @@ import KnowledgeAndSkills from './Components/Knowledge-and-skills/Knowledge-and-
 import Contact from './Components/Contact/Contact';
 import Social from './Components/Social/Social';
 import Home from './Components/Home/Home';
+import ScrollButton from './Components/ScrollToTop/ScrollButton';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLongArrowAltDown } from '@fortawesome/free-solid-svg-icons';
+import Backdrop from './Components/Menu/Backdrop/Backdrop';
+import SideDrawer from './Components/Menu/Button/SideDrawer';
 
 import './Gallery.scss'; 
 
@@ -68,16 +69,38 @@ class App extends Component {
       "introduction to HTTP basics - HTTP protocol that allows client - server communication (methods, status codes, requests, using AJAX techniques existent in JavaScript (XMLHttpRequest, fetch)",
       "basic knowledge about JSON objects and types of storing data (localStorage, sessionStorage, cookies)",
       "intro in JavaScript frameworks - ReactJS: props, state, setState, useEffect(), useState()"
-    ]
+    ],
+    sideDrawerOpen: false
+  }
+
+  drawerToggleClickHandler = () => {
+    this.setState( (prevState) => { 
+      return {
+        sideDrawerOpen: !prevState.sideDrawerOpen
+      }
+    })
+  }
+
+  backdropClickHandler = () => {
+    this.setState(
+      {
+        sideDrawerOpen: false
+      }
+    )
   }
 
   render() {
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />
+    }
 
     return (
       <div className="App">
         <div className="header-and-menu">
           <div className="top">
-            <Header />
+            <Header drawerClickHandler={this.drawerToggleClickHandler}/>
             <Menu className="menu"/>
           </div>
           <Social 
@@ -106,7 +129,7 @@ class App extends Component {
             <div className="education-and-job">
               <div id="education">
                 {this.state.education.map(education => 
-                  <Resume
+                  <Resume 
                     name={education.name}
                     period={education.period}
                     profile={education.profile}
@@ -124,6 +147,7 @@ class App extends Component {
           </div>
         
           <KnowledgeAndSkills className="knowledge" knowledge={this.state.knowledge}/>
+          
           <Contact 
             className="contact"
             email={this.state.contact.email}
@@ -132,8 +156,11 @@ class App extends Component {
             linkedin={this.state.linkedin}
             cv={this.state.download}
           />
+          <ScrollButton className="scroll" />
         </div>
-      </div> 
+        <SideDrawer show={this.state.sideDrawerOpen} />
+        {backdrop}
+      </div>
     );
   }
 }

@@ -8,7 +8,7 @@ const title = () => {
             <div id="line" />
             <p>Education and Experiences</p>
         </div>
-    )
+    ) 
 };
 
 export default title;

@@ -1,10 +1,10 @@
 import React from 'react'; 
 import './Home.scss';
 
-const home = (props) => {
+const home = (props) => { 
     console.log(props.occupation)
     return (
-        <div className="home">
+        <div className="Home">
             <div className="intro">
                 <div id="hi">
                     <p> Hi, I am </p>

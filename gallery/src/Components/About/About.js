@@ -1,10 +1,9 @@
 import React from 'react';
 
-import './About.scss';
+import './About.scss'; 
 
 const about = (props) => {
     let me = props.aboutMe;
-    console.log(me)
 
     return (
         <div className="about">
