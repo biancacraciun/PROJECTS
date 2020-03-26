@@ -4,14 +4,11 @@ import Home from '../Home/Home';
 import './ScrollButton.scss';
 
 class ScrollButton extends Component {
-    constructor (props) {
-        super(props);
-    };
-
-    scrollFunction = () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
+    
+    // scrollFunction = () => {
+    //     document.body.scrollTop = 0;
+    //     document.documentElement.scrollTop = 0;
+    // }
 
     scrollToTop = () => {
         let Scroll = require("react-scroll");

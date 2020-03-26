@@ -10,13 +10,13 @@ import './Social.scss';
 const social = (props) => {
     return (
         <div className="social">
-            <a href={props.github} target="_blank">
+            <a href={props.github} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon className="icon" icon={faGithub} size="2x" />
             </a>
-            <a href={props.linkedin} target="_blank">
+            <a href={props.linkedin} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon className="icon" icon={faLinkedin} size="2x" />
             </a>
-            <a href={props.github} target="_blank">
+            <a href={props.facebook} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon className="icon" icon={faFacebookSquare} size="2x"/>
             </a>
         </div>

@@ -3,7 +3,6 @@ import React from 'react';
 import './About.scss'; 
 
 const about = (props) => {
-    let me = props.aboutMe;
 
     return (
         <div className="about">
